@@ -9060,6 +9060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245453702}
   - component: {fileID: 245453703}
+  - component: {fileID: 245453704}
   m_Layer: 0
   m_Name: CM Rise from Marble
   m_TagString: Untagged
@@ -9109,6 +9110,26 @@ MonoBehaviour:
     FarClipPlane: 5000
     Dutch: 0
   m_ComponentOwner: {fileID: 9768724}
+--- !u!95 &245453704
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245453701}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &247713284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9962,6 +9983,8 @@ PlayableDirector:
     value: {fileID: 1221299815}
   - key: {fileID: -3291030663016940222, guid: 4782dff5671534441a6efc2d0763e97a, type: 2}
     value: {fileID: 1689761545}
+  - key: {fileID: 4960012760281039501, guid: 4782dff5671534441a6efc2d0763e97a, type: 2}
+    value: {fileID: 245453704}
   m_ExposedReferences:
     m_References:
     - 0c50771885bf4c24ab66f34b122bf61d: {fileID: 1689761544}
@@ -19199,6 +19222,7 @@ GameObject:
   - component: {fileID: 765581602}
   - component: {fileID: 765581601}
   - component: {fileID: 765581600}
+  - component: {fileID: 765581603}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -19274,6 +19298,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &765581603
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765581598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Definition: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
+  m_AmplitudeGain: 1
+  m_FrequencyGain: 1
 --- !u!1001 &769308132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34119,15 +34158,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679198257}
-  m_LocalRotation: {x: 0.01655163, y: 0.9840864, z: -0.16541842, w: -0.06274351}
-  m_LocalPosition: {x: 1.46, y: 6.4799995, z: 27.56}
+  m_LocalRotation: {x: 0.0103219785, y: 0.98589903, z: -0.16560137, w: -0.02174306}
+  m_LocalPosition: {x: 2.36, y: 9.47, z: 28.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 765581599}
   m_Father: {fileID: 1219604525}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 18.874, y: -172.167, z: 3.231}
+  m_LocalEulerAnglesHint: {x: 19.031, y: -177.193, z: 1.67}
 --- !u!114 &1679198259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45740,7 +45779,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043896029}
-  m_LocalRotation: {x: -0.012984467, y: 0.9948532, z: -0.098935135, w: -0.017621782}
+  m_LocalRotation: {x: -0.012984467, y: 0.9948532, z: -0.098935135, w: -0.018934138}
   m_LocalPosition: {x: -7.01, y: 0.03999996, z: 38.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
