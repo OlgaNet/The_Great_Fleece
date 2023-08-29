@@ -12,6 +12,7 @@ public class GuardAI : MonoBehaviour
     [SerializeField]
     private int currentTarget;
     private bool reverse;
+    private bool _targetReached;
 
     // Start is called before the first frame update
     void Start()
@@ -39,31 +40,44 @@ public class GuardAI : MonoBehaviour
 
             float distance = Vector3.Distance(transform.position, wayPoints[currentTarget].position);
 
-            if (distance < 1.0f)
+            if (distance < 1.0f && _targetReached == false)
             {
-                if (reverse == true)
-                {
-                    currentTarget--;
-                    if (currentTarget == 0)
-                    {
-                        reverse = false;
-                        currentTarget = 0;
-                    }
-                }
-                else
-                {
-                    currentTarget++;
+                _targetReached = true;
+                Debug.Log("Target Reached: " + _targetReached);
 
-                    if (currentTarget == wayPoints.Count)
-                    {
-                        //you've made it to the end
-                        reverse = true;
-                        currentTarget--;
-                    }
-                }
+                StartCoroutine(WaitBeforeMoving());
 
             }
         }
 
+    }
+    IEnumerator WaitBeforeMoving()
+    {
+        Debug.Log("WaitBeforeMoving()");
+        yield return new WaitForSeconds(2.0f);
+
+        if (reverse == true)
+        {
+            currentTarget--;
+
+            if (currentTarget == 0)
+            {
+                reverse = false;
+                currentTarget = 0;
+            }
+        }
+        else if (reverse == false)
+        {
+            currentTarget++;
+
+            if (currentTarget == wayPoints.Count)
+            {
+                //you've made it to the end
+                reverse = true;
+                currentTarget--;
+            }
+        }
+
+        _targetReached = false;
     }
 }
