@@ -2716,7 +2716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4242699464302382, guid: 0a4450f6e43e8194fa25563709d6c223, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.005947256
+      value: 0.005947255
       objectReference: {fileID: 0}
     - target: {fileID: 4242699464302382, guid: 0a4450f6e43e8194fa25563709d6c223, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2724,7 +2724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4242699464302382, guid: 0a4450f6e43e8194fa25563709d6c223, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.018210538
+      value: -0.018210536
       objectReference: {fileID: 0}
     - target: {fileID: 4446962720683340, guid: 0a4450f6e43e8194fa25563709d6c223, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31589,7 +31589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4338286230955942, guid: 5597e4cd8f614e74393cb7dcb77ffc4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.9
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4338286230955942, guid: 5597e4cd8f614e74393cb7dcb77ffc4f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35586,6 +35586,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864951037485478, guid: ee21d990a94451c45a9d07d327d2dae8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5668016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864951037485478, guid: ee21d990a94451c45a9d07d327d2dae8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.04326933
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee21d990a94451c45a9d07d327d2dae8, type: 3}
 --- !u!4 &1550766018 stripped
@@ -36196,6 +36204,8 @@ PlayableDirector:
     value: {fileID: 537207283}
   - key: {fileID: 6286149328676058494, guid: 05e3debfc20fc9f4a9a61e8d1ef629b6, type: 2}
     value: {fileID: 761476193}
+  - key: {fileID: 6263244849448523403, guid: 05e3debfc20fc9f4a9a61e8d1ef629b6, type: 2}
+    value: {fileID: 1629006129}
   m_ExposedReferences:
     m_References:
     - cdbf61ec24e91724abdf605a73eed502: {fileID: 1905984501}
