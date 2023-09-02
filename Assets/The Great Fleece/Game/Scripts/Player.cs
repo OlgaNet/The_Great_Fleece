@@ -5,9 +5,13 @@ using UnityEngine.AI;
 
 public class Player : MonoBehaviour
 {
+    public GameObject coinPrefab;
+    public AudioClip coinSoundEffect;
+
     private NavMeshAgent _agent;
     private Animator _anim; //Get handle to animator
     private Vector3 _target;
+    private bool _coinTossed;
 
     // Start is called before the first frame update
     void Start()
@@ -47,5 +51,41 @@ public class Player : MonoBehaviour
             _anim.SetBool("Walk", false);
         }
 
+        //if right click              
+        if (Input.GetMouseButtonDown(1) && _coinTossed == false)
+        {
+            Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
+
+
+            if (Physics.Raycast(rayOrigin, out hitInfo))
+            {
+                _anim.SetTrigger("Throw");
+                _coinTossed = true;
+                Instantiate(coinPrefab, hitInfo.point, Quaternion.identity); //instantiate that coin at clicked position
+                AudioSource.PlayClipAtPoint(coinSoundEffect, transform.position); //play sound effect for coin drop
+                SendAIToCoinSpot(hitInfo.point);
+            }
+            
+        } 
+
+    }
+    void SendAIToCoinSpot(Vector3 coinPos)
+    {
+        //round up the guards
+        GameObject[] guards = GameObject.FindGameObjectsWithTag("Guard1");
+        //go through each guard
+        foreach(var guard in guards)
+        {
+            NavMeshAgent currentAgent = guard.GetComponent<NavMeshAgent>();
+            GuardAI currentGuard = guard.GetComponent<GuardAI>();
+            Animator currentAnim = guard.GetComponent<Animator>();
+
+            currentGuard.coinTossed = true;
+            currentAgent.SetDestination(coinPos); //move to coin position
+            currentAnim.SetBool("Walk", true);
+            currentGuard.coinPos = coinPos;
+        }
+        //navmeshagent.setdestination = coinsPos
     }
 }
