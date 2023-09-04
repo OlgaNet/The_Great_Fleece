@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     }
 
     public AudioSource voiceOver;
+    public AudioSource music;
 
     private void Awake()
     {
